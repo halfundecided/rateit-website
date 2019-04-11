@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="../public/css/fullpage.css"
+    />
+    <link rel="stylesheet" href="../public/css/main.css" />
+    <script src="../public/js/fullpage.js"></script>
+  </head>
+  <body>
+    <div id="fullpage">
+      <div class="section">
+        <div class="container">
+          <div class="logo">
+            <span class="left"><</span>RateIt<span class="right">/></span>
+            <div class="text">
+              <span class="word">Course</span
+              ><span class="web">Evaluation</span>
+            </div>
+          </div>
+        </div>
+        <a
+          class="ca3-scroll-down-link ca3-scroll-down-arrow"
+          data-ca3_iconfont="ETmodules"
+          data-ca3_icon=""
+        ></a>
+      </div>
+      <div class="section">
+        sdfasdf
+      </div>
+      <div class="section fp-auto-height">this is footer</div>
+    </div>
+    <script>
+      new fullpage("#fullpage", {
+        anchors: ["page1", "page2", "page3"],
+        sectionsColor: ["yellow", "orange", "#C0C0C0"],
+        autoScrolling: true,
+        scrollHorizontally: true,
+        controlArrows: true,
+        verticalCentered: true,
+        responsiveWidth: 0,
+        responsiveHeight: 0
+      });
+
+      //methods
+      fullpage_api.setAllowScrolling(true);
+    </script>
+  </body>
+</html>
