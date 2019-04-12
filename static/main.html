@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="../public/css/main.css" />
     <script src="../public/js/fullpage.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   </head>
   <body>
     <div id="fullpage">
@@ -55,13 +56,33 @@
           data-ca3_icon=""
         ></a>
       </div>
-      <div class="section"></div>
+      <div class="section">
+        <div class="button_container">
+          <div class="button_su">
+            <span class="su_button_circle"> </span>
+            <a href="#" class="button_su_inner">
+              <span class="button_text_container">
+                Rate Courses
+              </span>
+            </a>
+          </div>
+
+          <div class="button_su">
+            <span class="su_button_circle"> </span>
+            <a href="#" class="button_su_inner">
+              <span class="button_text_container">
+                View Others
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
       <div class="section fp-auto-height">this is footer</div>
     </div>
     <script>
       new fullpage("#fullpage", {
         anchors: ["page1", "page2", "page3", "page4"],
-        sectionsColor: ["white", "#e17055", "#fab1a0", "#fff"],
+        sectionsColor: ["white", "#e17055", "#f8c291", "#fff"],
         autoScrolling: true,
         scrollHorizontally: true,
         controlArrows: true,
@@ -73,5 +94,6 @@
       //methods
       fullpage_api.setAllowScrolling(true);
     </script>
+    <script src="../public/js/buttons.js"></script>
   </body>
 </html>
