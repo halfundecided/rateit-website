@@ -6,3 +6,6 @@
     #ffb8b8 100%
   );
 }
+body {
+  font-family: "Courier New", Courier, monospace !important;
+}
