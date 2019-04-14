@@ -181,7 +181,7 @@
 
 .button_su_inner {
   display: inline-block;
-  background: #8e653b;
+  background: #ca8a5f;
   color: #f4f4f4;
   font-size: 25px;
   font-weight: normal;
@@ -246,4 +246,13 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 5em;
   color: white;
+}
+
+.section:nth-child(3) {
+  background-image: linear-gradient(
+    to right,
+    #ffecd2 0%,
+    #fcb69f 70%,
+    #ffecd2 100%
+  );
 }

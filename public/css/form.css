@@ -1,0 +1,8 @@
+.section:nth-child(1) {
+  background-image: linear-gradient(
+    to right,
+    #ffeef9 0%,
+    #ffcccc 51%,
+    #ffb8b8 100%
+  );
+}
