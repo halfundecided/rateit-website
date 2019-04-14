@@ -181,7 +181,7 @@
 
 .button_su_inner {
   display: inline-block;
-  background: #e55039;
+  background: #8e653b;
   color: #f4f4f4;
   font-size: 25px;
   font-weight: normal;
@@ -221,7 +221,7 @@
     height: 400px;
     margin-left: -200px;
     margin-top: -200px;
-    background-color: rgba(20, 180, 87, 0.8);
+    background-color: #6c6148;
   }
 }
 
@@ -231,7 +231,7 @@
     height: 400px;
     margin-left: -200px;
     margin-top: -200px;
-    background-color: rgba(20, 180, 87, 0.8);
+    background-color: #6c6148;
   }
   100% {
     width: 0px;
