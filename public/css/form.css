@@ -2,10 +2,16 @@
   background-image: linear-gradient(
     to right,
     #ffeef9 0%,
-    #ffcccc 51%,
+    #ffcccc 40%,
     #ffb8b8 100%
   );
 }
 body {
   font-family: "Courier New", Courier, monospace !important;
+  color: #4b4b4b !important;
+}
+.footer {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5em;
+  color: white;
 }
