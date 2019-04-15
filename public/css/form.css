@@ -1,13 +1,36 @@
-.section:nth-child(1) {
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+/* .section:nth-child(1) {
   background-image: linear-gradient(
     to right,
     #ffeef9 0%,
     #ffcccc 40%,
     #ffb8b8 100%
   );
+} */
+.section:nth-child(1) {
+  background: -webkit-linear-gradient(
+    90deg,
+    #ec6f66 10%,
+    #f3a183 90%
+  ); /* Chrome 10+, Saf5.1+ */
+  background: -moz-linear-gradient(
+    90deg,
+    #ec6f66 10%,
+    #f3a183 90%
+  ); /* FF3.6+ */
+  background: -ms-linear-gradient(90deg, #ec6f66 10%, #f3a183 90%); /* IE10 */
+  background: -o-linear-gradient(
+    90deg,
+    #ec6f66 10%,
+    #f3a183 90%
+  ); /* Opera 11.10+ */
+  background: linear-gradient(90deg, #ec6f66 10%, #f3a183 90%); /* W3C */
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
 }
 body {
-  font-family: "Courier New", Courier, monospace !important;
+  /* font-family: "Courier New", Courier, monospace;
+  font-family:  */
   color: #4b4b4b !important;
 }
 .footer {
@@ -27,4 +50,14 @@ a {
   text-decoration: none;
   border: 0;
   color: #b2bec3 !important;
+}
+
+.form-body {
+  border-radius: 0.5rem;
+  background-color: #ffdfd9;
+  padding: 10px 10px 10px 30px !important;
+}
+
+button {
+  margin-left: 25rem !important;
 }
