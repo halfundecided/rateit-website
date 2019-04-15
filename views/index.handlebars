@@ -1,0 +1,87 @@
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>RateIt | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../public/css/fullpage.css" />
+    <link rel="stylesheet" href="../public/css/main.css" />
+    <script src="../public/js/fullpage.js"></script>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div class="section">
+            <div class="container">
+                <div class="logo">
+                    <span class="left">
+                        <</span>RateIt <span class="right">/>
+                    </span>
+                    <div class="text">
+                        <span class="word">Course</span><span class="web">Evaluation</span>
+                    </div>
+                </div>
+            </div>
+            <a href="/#page2" class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules"
+                data-ca3_icon=""></a>
+        </div>
+        <div class="section">
+            <div class="content">
+                <div class="inner">
+                    <header>
+                        <h2 class="section-header">Rate and Share Your Experience</h2>
+                        <p class="info">RateIt</p>
+                    </header>
+                    <p>
+                        RateIt is an online community for Stevens students to share
+                        feedbacks of courses and instructors with their fellow students.
+                        We strive to help out users navigate course offerings and
+                        registration process with ease and confidence.
+                    </p>
+                </div>
+            </div>
+            <a href="/#page3" class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules"
+                data-ca3_icon=""></a>
+        </div>
+        <div class="section">
+            <div class="button_container">
+                <div class="button_su">
+                    <span class="su_button_circle"> </span>
+                    <a href="/" class="button_su_inner">
+                        <span class="button_text_container">
+                            Rate Courses
+                        </span>
+                    </a>
+                </div>
+
+                <div class="button_su">
+                    <span class="su_button_circle"> </span>
+                    <a href="#" class="button_su_inner">
+                        <span class="button_text_container">
+                            View Others
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="section fp-auto-height">
+            <div class="footer">This is footer part</div>
+        </div>
+    </div>
+    <script>
+        new fullpage("#fullpage", {
+            anchors: ["page1", "page2", "page3", "page4"],
+            sectionsColor: ["white", "#e17055", "", "#2d3436"],
+            autoScrolling: true,
+            scrollHorizontally: true,
+            controlArrows: true,
+            verticalCentered: true,
+            responsiveWidth: 0,
+            responsiveHeight: 0
+        });
+
+        //methods
+        fullpage_api.setAllowScrolling(true);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../public/js/buttons.js"></script>
+</body>

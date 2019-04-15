@@ -1,9 +1,8 @@
-const path = require("path");
-
 const constructorMethod = app => {
   app.use("/", (req, res) => {
-    res.sendFile(path.resolve("static/main.html"));
+    res.render("index", {});
   });
+
   app.use("*", (req, res) => {
     res.redirect("/");
   });
