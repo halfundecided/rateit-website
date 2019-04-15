@@ -1,5 +1,5 @@
-const majorData = require("./selections/majors");
-const courseData = require("./selections/courses");
+const majorData = require("./majors");
+const courseData = require("./courses");
 
 module.exports = {
   majors: majorData,
