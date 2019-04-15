@@ -29,12 +29,16 @@ const getAllMajor = async () => {
 
 const getListOfMajors = async () => {
   const majorCollection = await majors();
-  const allMajors = await majorCollection.find({}).toArray();
-  const majorList = [];
-  for (let i = 0; i < allMajors.length; i++) {
-    majorList.push(allMajors[i].majorName);
-  }
-  return majorList;
+  const allMajors = await majorCollection
+    .find({})
+    .project({ majorName: 1 })
+    .toArray();
+  // const majorList = [];
+  // for (let i = 0; i < allMajors.length; i++) {
+  //   majorList.push(allMajors[i].majorName);
+  // }
+  // return majorList;
+  return allMajors;
 };
 
 const getMajorById = async id => {

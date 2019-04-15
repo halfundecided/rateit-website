@@ -44,6 +44,7 @@ const main = async () => {
       csId
     );
     await courses.addCourse("Concurrent Programming", "CS511", csId);
+    await courses.addCourse("hello it's mijeong", "CS342", cysecId);
   } catch (e) {
     console.log(e);
   }

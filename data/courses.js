@@ -38,6 +38,15 @@ const getAllCourse = async () => {
   return allCourses;
 };
 
+const getListOfCourses = async majorInfo => {
+  const courseCollection = await courses();
+  const allCourses = await courseCollection
+    .find({ major: ObjectId(majorInfo) })
+    .project({ title: 1, code: 1 })
+    .toArray();
+  return allCourses;
+};
+
 const getCourseById = async id => {
   if (typeof id === "undefined" || id.constructor !== String)
     throw `invalid id`;
@@ -52,5 +61,6 @@ const getCourseById = async id => {
 module.exports = {
   addCourse,
   getAllCourse,
-  getCourseById
+  getCourseById,
+  getListOfCourses
 };

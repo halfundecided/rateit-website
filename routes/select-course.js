@@ -1,14 +1,14 @@
 const express = require("express");
 const router = express.Router();
 const data = require("../data");
-const majorData = data.majors;
+const courseData = data.courses;
 
 router.get("/", async (req, res) => {
+  const majorInfo = req.query.selectedMajor;
+
   try {
-    const majorList = await majorData.getListOfMajors();
-    res.render("selection/select-major", {
-      majorList: majorList
-    });
+    const courseList = await courseData.getListOfCourses(majorInfo);
+    res.render("selection/select-course", { courseList: courseList });
   } catch (e) {
     res.status(500).json({ error: e });
   }
