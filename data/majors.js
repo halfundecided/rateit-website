@@ -9,8 +9,7 @@ const addMajor = async name => {
   const majorCollection = await majors();
 
   let newMajor = {
-    majorName: name,
-    courses: {}
+    majorName: name
   };
 
   const insertInfo = await majorCollection.insertOne(newMajor);
@@ -33,11 +32,6 @@ const getListOfMajors = async () => {
     .find({})
     .project({ majorName: 1 })
     .toArray();
-  // const majorList = [];
-  // for (let i = 0; i < allMajors.length; i++) {
-  //   majorList.push(allMajors[i].majorName);
-  // }
-  // return majorList;
   return allMajors;
 };
 

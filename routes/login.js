@@ -9,4 +9,11 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.post("/ing", async (req, res) => {
+  try {
+    let username = req.body.username;
+    let password = req.body.password;
+  } catch (e) {}
+});
+
 module.exports = router;

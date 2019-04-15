@@ -14,4 +14,15 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/form", async (req, res) => {
+  const courseInfo = req.query.selectedCourse;
+
+  try {
+    const courseList = await courseData.getCourseById(courseInfo);
+    res.render("form/form", { courseList: courseList });
+  } catch (e) {
+    res.status(500).json({ error: e });
+  }
+});
+
 module.exports = router;
