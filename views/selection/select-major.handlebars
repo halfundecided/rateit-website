@@ -22,10 +22,12 @@
                     </div>
                     <input type="hidden" name="major" />
                     <ul class="dropdown-menu">
+                        {{#each majorList}}
                         <li id="computer-science">
-                            <a href="./selection-computer-science.html">Computer Science</a>
+                            <a href="">{{this}}</a>
                         </li>
-                        <li id="cybersecurity">Cybersecurity</li>
+                        {{/each}}
+
                     </ul>
                 </div>
 

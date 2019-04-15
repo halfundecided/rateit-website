@@ -27,6 +27,16 @@ const getAllMajor = async () => {
   return allMajors;
 };
 
+const getListOfMajors = async () => {
+  const majorCollection = await majors();
+  const allMajors = await majorCollection.find({}).toArray();
+  const majorList = [];
+  for (let i = 0; i < allMajors.length; i++) {
+    majorList.push(allMajors[i].majorName);
+  }
+  return majorList;
+};
+
 const getMajorById = async id => {
   if (typeof id === "undefined" || id.constructor !== String)
     throw `invalid id`;
@@ -41,5 +51,6 @@ const getMajorById = async id => {
 module.exports = {
   addMajor,
   getAllMajor,
-  getMajorById
+  getMajorById,
+  getListOfMajors
 };

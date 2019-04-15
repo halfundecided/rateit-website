@@ -7,6 +7,8 @@ const main = async () => {
   /* ADDING MAJORS */
   const computerScience = await majors.addMajor("Computer Science");
   const csId = computerScience._id;
+  const cybersecurity = await majors.addMajor("CyberSecurity");
+  const cysecId = cybersecurity._id;
 
   /* ADDING COURSES */
   try {
