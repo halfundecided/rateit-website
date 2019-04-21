@@ -1,9 +1,7 @@
-<html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>RateIt | Evaluate</title>
+    <title>RateIt | Evaluation Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="../public/css/fullpage.css" />
     <link rel="stylesheet" href="../public/css/form.css" />
@@ -18,15 +16,16 @@
             <div class="container-fluid w-75 p-3 form-body">
                 <h3 class="text-center">Rate a Course<h3>
                         <h5 class="text-center">{{courseList.code}} {{courseList.title}}</h5>
-                        <form>
+                        <form method="GET" action="/posts">
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="instructorName">Instructor Name</label>
-                                    <input type="text" class="form-control" id="instructorName" placeholder="Name" />
+                                    <input type="text" class="form-control" name="instructorName" id="instructorName"
+                                        placeholder="Name" />
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="semesterAndYear">Semester/Year</label>
-                                    <select class="form-control">
+                                    <label for="semesterAndYear">Term</label>
+                                    <select class="form-control" name="selectedTerm">
                                         <option>2019 Spring</option>
                                         <option>2018 Fall</option>
                                         <option>2018 Summer I/II</option>
@@ -41,113 +40,67 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="question1">Overall Rating</label>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
-                                        value="option1" />
-                                    <label class="form-check-label" for="inlineCheckbox1">1</label>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="question1">Overall Rating</label>
+                                    <select class="form-control" name="question1">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                        value="option2" />
-                                    <label class="form-check-label" for="inlineCheckbox2">2</label>
+                                <div class="form-group col-md-6">
+                                    <label for="question2">The difficulty level of the course</label>
+                                    <select class="form-control" name="question2">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                        value="option2" />
-                                    <label class="form-check-label" for="inlineCheckbox2">3</label>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="question3">Instructor Rating</label>
+                                    <select class="form-control" name="question3">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                        value="option2" />
-                                    <label class="form-check-label" for="inlineCheckbox2">4</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                        value="option2" />
-                                    <label class="form-check-label" for="inlineCheckbox2">5</label>
+                                <div class="form-group col-md-6">
+                                    <label for="question4">Comments about the instructor</label>
+                                    <textarea class="form-control" name="question4" rows="2"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Rate the difficulty level of the course</label>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
-                                        value="option1" />
-                                    <label class="form-check-label" for="inlineCheckbox1">1</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                        value="option2" />
-                                    <label class="form-check-label" for="inlineCheckbox2">2</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                        value="option2" />
-                                    <label class="form-check-label" for="inlineCheckbox2">3</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                        value="option2" />
-                                    <label class="form-check-label" for="inlineCheckbox2">4</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                        value="option2" />
-                                    <label class="form-check-label" for="inlineCheckbox2">5</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Rate the instructor?</label>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
-                                        value="option1" />
-                                    <label class="form-check-label" for="inlineCheckbox1">1</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                        value="option2" />
-                                    <label class="form-check-label" for="inlineCheckbox2">2</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                        value="option2" />
-                                    <label class="form-check-label" for="inlineCheckbox2">3</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                        value="option2" />
-                                    <label class="form-check-label" for="inlineCheckbox2">4</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                        value="option2" />
-                                    <label class="form-check-label" for="inlineCheckbox2">5</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleFormControlTextarea1">What knowledge/skill would you suggest other
+                                <label for="question5">What knowledge/skill would you suggest other
                                     student
                                     get
                                     familiar with in order to succeed in this course?</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                                <textarea class="form-control" name="question5" rows="2"></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="exampleFormControlTextarea1">How is the course graded? (mid-term, final,
+                                <label for="question6">How is the course graded? (mid-term, final,
                                     quizzes
                                     etc.)</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                                <textarea class="form-control" name="question6" rows="2"></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Would you recommend this course to a fellow
+                                <label for="question7">Would you recommend this course to a fellow
                                     student in
                                     your
                                     program? If yes, why?</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                                <textarea class="form-control" name="question7" rows="2"></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="exampleFormControlTextarea1">More Info</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                                <label for="questionn8">More Info</label>
+                                <textarea class="form-control" name="question8" rows="2"></textarea>
                             </div>
                             <button type="submit" class="btn btn-secondary float-center">
                                 Submit
@@ -157,9 +110,21 @@
         </div>
 
         <div class="section fp-auto-height">
+            <div class="logo-small">
+                <div class="container-footer">
+                    <div class="logo-footer">
+                        <span class="left-footer">
+                            <</span> <a href="/">RateIt</a> <span class="right-footer">/>
+                                </span>
+                                <div class="text-footer">
+                                    <span class="word-footer">Course</span><span class="web">Evaluation</span>
+                                </div>
+                    </div>
+                </div>
+            </div>
             <div class="footer">
                 <div class="container-contact">
-                    <p><a href="/">🔥RateIt🔥</a></p>
+                    {{!-- <p><a href="/">🔥RateIt🔥</a></p> --}}
                     <p>📞(917) 291 8448 | 📪mban1@stevens.edu | 📍Stevens Institute of Technology</p>
                 </div>
                 <div class="container-copyright">
