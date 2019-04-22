@@ -1,0 +1,70 @@
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>RateIt | Added</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../public/css/fullpage.css" />
+    <link rel="stylesheet" href="../public/css/added.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <script src="../public/js/fullpage.js"></script>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div class="section">
+            <div class="container-fluid w-75 p-3 form-body">
+                <h5>Your Course Evaluation Post Added! Thank You! <span class="badge badge-secondary">New</span></h5>
+                <h6><a class="black-go" href="/posts/all">GO TO SEE ALL POSTS! 👉🏻</a></h6>
+            </div>
+
+        </div>
+
+        <div class="section fp-auto-height">
+            <div class="logo-small">
+                <div class="container-footer">
+                    <div class="logo-footer">
+                        <span class="left-footer">
+                            <</span> <a href="/">RateIt</a> <span class="right-footer">/>
+                                </span>
+                                <div class="text-footer">
+                                    <span class="word-footer">Course</span><span class="web">Evaluation</span>
+                                </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="container-contact">
+                    {{!-- <p><a href="/">🔥RateIt🔥</a></p> --}}
+                    <p>📞(917) 291 8448 | 📪mban1@stevens.edu | 📍Stevens Institute of Technology</p>
+                </div>
+                <div class="container-copyright">
+                    <p>© RateIt. All rights reserved. Developed by Mijeong Ban</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        new fullpage("#fullpage", {
+            anchors: ["page1", "page2"],
+            sectionsColor: ["#f3a683", "#2d3436"],
+            autoScrolling: true,
+            scrollHorizontally: true,
+            controlArrows: true,
+            verticalCentered: true,
+            responsiveWidth: 0,
+            responsiveHeight: 0
+        });
+
+        fullpage_api.setAllowScrolling(true);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>

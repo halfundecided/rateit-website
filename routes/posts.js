@@ -3,7 +3,7 @@ const router = express.Router();
 const data = require("../data");
 const postData = data.posts;
 
-router.get("/", async (req, res) => {
+router.get("/added", async (req, res) => {
   const getPostInfo = req.query;
   if (
     !getPostInfo ||
@@ -34,7 +34,16 @@ router.get("/", async (req, res) => {
   };
   try {
     const postList = await postData.addPost(postInfoFromUser);
-    res.render("posts/posts", { postList: postList });
+    res.render("posts/added", {});
+  } catch (e) {
+    res.status(500).json({ error: e });
+  }
+});
+
+router.get("/all", async (req, res) => {
+  try {
+    const allPostList = await postData.getAllPost();
+    res.render("posts/posts", { postList: allPostList });
   } catch (e) {
     res.status(500).json({ error: e });
   }

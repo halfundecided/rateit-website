@@ -5,23 +5,22 @@ const { ObjectId } = require("mongodb");
 const addPost = async postInfo => {
   //TODO: check types
   const postCollection = await posts();
-  console.log(postInfo);
   const newPost = {
     //major
     //course name
     instructorName: postInfo.instructorName,
-    term: postInfo.selectedTerm,
-    q1: postInfo.question1,
-    q2: postInfo.question2,
-    q3: postInfo.question3,
-    q4: postInfo.question4,
-    q5: postInfo.question5,
-    q6: postInfo.question6,
-    q7: postInfo.question7,
-    q8: postInfo.question8
+    term: postInfo.term,
+    q1: postInfo.q1,
+    q2: postInfo.q2,
+    q3: postInfo.q3,
+    q4: postInfo.q4,
+    q5: postInfo.q5,
+    q6: postInfo.q6,
+    q7: postInfo.q7,
+    q8: postInfo.q8
   };
   const insertInfo = await postCollection.insertOne(newPost);
-  if (insertInfo.insertedCount === 0) throw "Could nnot add post";
+  if (insertInfo.insertedCount === 0) throw "Could not add post";
   return await postCollection.findOne({
     _id: ObjectId(insertInfo.insertedId)
   });
