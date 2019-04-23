@@ -33,7 +33,15 @@ const getAllPost = async () => {
   return allPosts;
 };
 
+const numberOfPosts = async () => {
+  const postCollection = await posts();
+
+  const numOfPosts = await postCollection.find({}).count();
+  return numOfPosts;
+};
+
 module.exports = {
   addPost,
-  getAllPost
+  getAllPost,
+  numberOfPosts
 };

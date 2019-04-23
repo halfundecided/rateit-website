@@ -19,6 +19,14 @@ const addUser = async username => {
   });
 };
 
+const numberOfUsers = async () => {
+  const userCollection = await users();
+
+  const numOfUsers = await userCollection.find({}).count();
+  return numOfUsers;
+};
+
 module.exports = {
-  addUser
+  addUser,
+  numberOfUsers
 };
