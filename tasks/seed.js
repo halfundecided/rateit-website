@@ -9,6 +9,25 @@ const main = async () => {
   const csId = computerScience._id;
   const mathematics = await majors.addMajor("Mathematics");
   const maId = mathematics._id;
+  const biomedicalEngineering = await majors.addMajor("Biomedical Engineering");
+  const beId = biomedicalEngineering._id;
+  const chemicalEngineering = await majors.addMajor("Chemical Engineering");
+  const ceId = chemicalEngineering._id;
+  const civilEngineering = await majors.addMajor("Civil Engineering");
+  const cveId = civilEngineering._id;
+  const computerEngineering = await majors.addMajor("Computer Engineering");
+  const cpteId = computerEngineering._id;
+  /* temp */
+  await majors.addMajor("Electrical Engineering");
+  await majors.addMajor("Engineering Management");
+  await majors.addMajor("Environmental Engineering");
+  await majors.addMajor("Mechanical Engineering");
+  await majors.addMajor("Software Engineering");
+  await majors.addMajor("Cybersecurity");
+  await majors.addMajor("Biology");
+  await majors.addMajor("Chemistry");
+  await majors.addMajor("Chemical Biology");
+  await majors.addMajor("Quantitative Finance");
 
   /* ADDING COURSES*/
   try {

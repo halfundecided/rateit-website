@@ -6,8 +6,8 @@ const addPost = async postInfo => {
   //TODO: check types
   const postCollection = await posts();
   const newPost = {
-    //major
-    //course name
+    courseCode: postInfo.courseCode,
+    courseTitle: postInfo.courseTitle,
     instructorName: postInfo.instructorName,
     term: postInfo.term,
     q1: postInfo.q1,

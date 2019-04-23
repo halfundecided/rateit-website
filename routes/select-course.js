@@ -19,7 +19,7 @@ router.get("/form", async (req, res) => {
 
   try {
     const courseList = await courseData.getCourseById(courseInfo);
-    res.render("form/form", { courseList: courseList });
+    res.render("form/form", { courseList, courseInfo });
   } catch (e) {
     res.status(500).json({ error: e });
   }

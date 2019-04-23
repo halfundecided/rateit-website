@@ -21,6 +21,8 @@ router.get("/added", async (req, res) => {
     res.status(400).json({ error: "You must provide answers for all" });
   }
   const postInfoFromUser = {
+    courseCode: getPostInfo.courseCode,
+    courseTitle: getPostInfo.courseTitle,
     instructorName: getPostInfo.instructorName,
     term: getPostInfo.selectedTerm,
     q1: getPostInfo.question1,
@@ -32,8 +34,9 @@ router.get("/added", async (req, res) => {
     q7: getPostInfo.question7,
     q8: getPostInfo.question8
   };
+
   try {
-    const postList = await postData.addPost(postInfoFromUser);
+    await postData.addPost(postInfoFromUser);
     res.render("posts/added", {});
   } catch (e) {
     res.status(500).json({ error: e });

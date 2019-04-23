@@ -14,49 +14,30 @@
     <div id="fullpage">
         <div class="section fp-auto-height">
             <div class="container-fluid w-75 p-3 form-body">
-                <div class="accordion" id="accordionExample">
-                    {{#each postList}}
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link" type="button" data-toggle="collapse"
-                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Course Title | Post Title
-                                </button>
-                            </h5>
-                        </div>
-
-                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                <div class="">
-                                    <h3>Post Title</h1>
-                                        <h5>Course Code | Course Title | {{this.term}} | {{this.instructorName}}</h5>
-                                        <p class=" lead">{{this.q7}}</p>
-                                        {{!-- <hr class="my-4"> --}}
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">Overall Rating: {{this.q1}}</li>
-                                            <li class="list-group-item">The Difficulty Level: {{this.q2}}</li>
-                                            <li class="list-group-item">Instructor Rating: {{this.q3}}</li>
-                                            <li class="list-group-item disabled">Q: How would you comment about the
-                                                instructor?</li>
-                                            <li class="list-group-item">{{this.q4}}</li>
-                                            <li class="list-group-item disabled">Q: What knowledge/skill would you
-                                                suggest other student get familiar with in order to succeed in this
-                                                course?</li>
-                                            <li class="list-group-item">{{this.q5}}</li>
-                                            <li class="list-group-item disabled">Q: How is the course graded? (mid-term,
-                                                final, quizzes etc.)</li>
-                                            <li class="list-group-item">{{this.q6}}</li>
-                                            <li class="list-group-item disabled">Q: Last thing to say?</li>
-                                            <li class="list-group-item">{{this.q8}}</li>
-                                        </ul>
-                                </div>
-
-                            </div>
-                        </div>
+                <div class="card-body">
+                    <div class="">
+                        <h3>Post Title</h1>
+                            <h5>Course Code | Course Title | {{this.term}} | {{this.instructorName}}</h5>
+                            <p class=" lead">{{this.q7}}</p>
+                            {{!-- <hr class="my-4"> --}}
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Overall Rating: {{this.q1}}</li>
+                                <li class="list-group-item">The Difficulty Level: {{this.q2}}</li>
+                                <li class="list-group-item">Instructor Rating: {{this.q3}}</li>
+                                <li class="list-group-item disabled">Q: How would you comment about the
+                                    instructor?</li>
+                                <li class="list-group-item">{{this.q4}}</li>
+                                <li class="list-group-item disabled">Q: What knowledge/skill would you
+                                    suggest other student get familiar with in order to succeed in this
+                                    course?</li>
+                                <li class="list-group-item">{{this.q5}}</li>
+                                <li class="list-group-item disabled">Q: How is the course graded? (mid-term,
+                                    final, quizzes etc.)</li>
+                                <li class="list-group-item">{{this.q6}}</li>
+                                <li class="list-group-item disabled">Q: Last thing to say?</li>
+                                <li class="list-group-item">{{this.q8}}</li>
+                            </ul>
                     </div>
-                    {{/each}}
                 </div>
             </div>
         </div>
