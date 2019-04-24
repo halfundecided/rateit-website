@@ -58,8 +58,8 @@ a {
   background-color: #ffdfd9;
 }
 
-button {
-  margin-left: 35rem !important;
+.button-container {
+  margin-left: 34rem !important;
 }
 
 .footer {
@@ -127,7 +127,7 @@ a:hover {
   font-size: 12px;
   position: absolute;
   top: 75px;
-  left: 90px;
+  left: 80px;
 }
 .left-footer {
   margin: 0 25px 0 0;

@@ -196,12 +196,12 @@ img {
 
 /*-- end reset --*/
 body {
-  background: #ea8685;
+  background: #636e72;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #ea8685, #ea8685);
-  background: -moz-linear-gradient(to top, #ea8685, #ea8685);
-  background: -o-linear-gradient(to top, #ea8685, #ea8685);
-  background: linear-gradient(to top, #ea8685, #ea8685);
+  background: -webkit-linear-gradient(to top, #636e72, #636e72);
+  background: -moz-linear-gradient(to top, #636e72, #636e72);
+  background: -o-linear-gradient(to top, #636e72, #636e72);
+  background: linear-gradient(to top, #636e72, #636e72);
   background-size: cover;
   background-attachment: fixed;
   font-family: "Roboto", sans-serif;
@@ -302,9 +302,9 @@ input.text.w3lpass {
 input[type="submit"] {
   font-size: 0.9em;
   color: #fff;
-  background: #e66767;
+  background: #636e72;
   outline: none;
-  border: 1px solid #ea8685;
+  border: 1px solid #636e72;
   cursor: pointer;
   padding: 0.9em;
   -webkit-appearance: none;
@@ -353,7 +353,7 @@ input[type="submit"]:hover {
 }
 
 input.checkbox {
-  background: #ea8685;
+  background: #636e72;
   cursor: pointer;
   width: 1.2em;
   height: 1.2em;
@@ -928,7 +928,7 @@ a {
   font-size: 12px;
   position: absolute;
   top: 65px;
-  left: 90px;
+  left: 80px;
 }
 .left-footer {
   margin: 0 25px 0 0;
