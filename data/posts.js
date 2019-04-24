@@ -40,8 +40,18 @@ const numberOfPosts = async () => {
   return numOfPosts;
 };
 
+const getPostByCode = async code => {
+  if (typeof code === "undefinned" || code.constructor !== String)
+    throw `invalid code`;
+  const postCollection = await posts();
+  const thosePosts = await postCollection.find({ courseCode: code }).toArray();
+  if (thosePosts === null) throw "No Post with this code";
+  return thosePosts;
+};
+
 module.exports = {
   addPost,
   getAllPost,
-  numberOfPosts
+  numberOfPosts,
+  getPostByCode
 };

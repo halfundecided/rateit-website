@@ -54,13 +54,24 @@ const getCourseById = async id => {
   const courseCollection = await courses();
   const parsedId = ObjectId.createFromHexString(id);
   const thisCourse = await courseCollection.findOne({ _id: parsedId });
-  if (thisCourse === null) throw "No major with this id";
+  if (thisCourse === null) throw "No course with this id";
   return thisCourse;
+};
+
+const getCourseByCode = async code => {
+  if (typeof code === "undefined" || code.constructor !== String)
+    throw `invalid code`;
+
+  const courseCollection = await courses();
+  const thoseCourse = await courseCollection.findOne({ code: code });
+  if (thoseCourse === null) throw "No course with this code";
+  return thoseCourse;
 };
 
 module.exports = {
   addCourse,
   getAllCourse,
   getCourseById,
-  getListOfCourses
+  getListOfCourses,
+  getCourseByCode
 };
